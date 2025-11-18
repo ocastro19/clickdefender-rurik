@@ -10,8 +10,6 @@ There are several ways of editing your application.
 
 **Use Lovable**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/25670dd8-6964-49dc-b26a-b8eeb366ccb6) and start prompting.
-
 Changes made via Lovable will be committed automatically to this repo.
 
 **Use your preferred IDE**
@@ -61,10 +59,6 @@ This project is built with:
 - Tailwind CSS
 
 ## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/25670dd8-6964-49dc-b26a-b8eeb366ccb6) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
 
 Yes, you can!
 
