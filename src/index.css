@@ -1,0 +1,840 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* CLICK SYNC Design System - Dark Theme */
+    --background: 240 10% 6%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 4% 16%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 4% 16%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 240 4% 16%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 4% 16%;
+    --input: 240 4% 16%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.5rem;
+
+    /* CLICK SYNC Premium Dashboard tokens */
+    --brand-blue: 217 91% 60%;
+    --brand-blue-hover: 217 91% 55%;
+    --dark-bg: 240 10% 6%;
+    --dark-card: 240 10% 8%;
+    --dark-border: 240 6% 12%;
+
+    /* Premium Analytics Colors */
+    --success: 142 76% 36%;
+    --success-bright: 142 76% 50%;
+    --warning: 45 93% 47%;
+    --warning-bright: 45 93% 60%;
+    --danger: 0 84% 60%;
+    --danger-bright: 0 84% 70%;
+    --info: 217 91% 60%;
+    --info-bright: 217 91% 70%;
+    --purple: 262 83% 58%;
+    --purple-bright: 262 83% 70%;
+    --cyan: 189 94% 43%;
+    --cyan-bright: 189 94% 55%;
+
+    /* Transaction Colors - Verde para vendas, Amarelo para upsell, Vermelho para reembolso */
+    --transaction-sales: 142 76% 50%;
+    --transaction-upsell: 45 93% 60%;
+    --transaction-refund: 0 84% 60%;
+
+    /* Premium Gradients */
+    --gradient-success: linear-gradient(135deg, hsl(var(--success)), hsl(var(--success-bright)));
+    --gradient-warning: linear-gradient(135deg, hsl(var(--warning)), hsl(var(--warning-bright)));
+    --gradient-danger: linear-gradient(135deg, hsl(var(--danger)), hsl(var(--danger-bright)));
+    --gradient-info: linear-gradient(135deg, hsl(var(--info)), hsl(var(--info-bright)));
+    --gradient-purple: linear-gradient(135deg, hsl(var(--purple)), hsl(var(--purple-bright)));
+    --gradient-cyan: linear-gradient(135deg, hsl(var(--cyan)), hsl(var(--cyan-bright)));
+    
+    /* Chart Colors */
+    --chart-1: 217 91% 60%;
+    --chart-2: 142 76% 50%;
+    --chart-3: 0 84% 60%;
+    --chart-4: 45 93% 60%;
+    --chart-5: 262 83% 58%;
+    --chart-6: 189 94% 43%;
+    --chart-7: 320 65% 52%;
+    --chart-8: 25 95% 53%;
+
+    /* Premium Shadows - Sem efeitos neon */
+    --shadow-glow: 0 4px 12px hsla(0, 0%, 0%, 0.1);
+    --shadow-premium: 0 8px 25px hsla(0, 0%, 0%, 0.15);
+    --shadow-card: 0 2px 8px hsla(0, 0%, 0%, 0.08);
+
+    --sidebar-background: 240 10% 8%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4% 16%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 240 6% 12%;
+    --sidebar-ring: 217 91% 60%;
+  /* Premium shadows - Sem efeitos neon */
+  --shadow-premium: 0 8px 20px hsla(0, 0%, 0%, 0.12);
+  --shadow-glow: 0 4px 12px hsla(0, 0%, 0%, 0.1);
+  --shadow-elegant: 0 2px 8px hsla(0, 0%, 0%, 0.08);
+}
+
+  .light {
+    /* CLICK SYNC Light Theme - VIBRANT PROFESSIONAL EDITION */
+    --background: 210 20% 90%;
+    --foreground: 222 84% 4%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 84% 4%;
+
+    --popover: 210 15% 97%;
+    --popover-foreground: 222 84% 4%;
+
+    --primary: 217 91% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 40% 90%;
+    --secondary-foreground: 222 84% 4%;
+
+    --muted: 210 40% 92%;
+    --muted-foreground: 215 16% 35%;
+
+    --accent: 210 40% 88%;
+    --accent-foreground: 222 84% 4%;
+
+    --destructive: 0 84% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 82%;
+    --input: 0 0% 100%;
+    --ring: 217 91% 55%;
+
+    --sidebar-background: 210 25% 99%;
+    --sidebar-foreground: 222 84% 4%;
+    --sidebar-primary: 217 91% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 40% 90%;
+    --sidebar-accent-foreground: 222 84% 4%;
+    --sidebar-border: 214 32% 82%;
+    --sidebar-ring: 217 91% 55%;
+
+    /* Light Premium Colors - VIBRANT PROFESSIONAL */
+    --success: 142 85% 18%;
+    --success-bright: 142 85% 25%;
+    --warning: 35 95% 45%;
+    --warning-bright: 35 98% 55%;
+    --danger: 0 88% 52%;
+    --danger-bright: 0 92% 62%;
+    --info: 217 95% 52%;
+    --info-bright: 217 95% 62%;
+    --purple: 262 85% 52%;
+    --purple-bright: 262 90% 62%;
+    --cyan: 189 95% 38%;
+    --cyan-bright: 189 98% 48%;
+
+    /* Transaction Colors - DISTINCTIVE LIGHT THEME */
+    --transaction-sales: 142 85% 18%;
+    --transaction-upsell: 35 95% 45%;
+    --transaction-refund: 0 88% 52%;
+
+    /* Premium Design System - ENHANCED CONTRAST */
+    --brand-blue: 217 95% 52%;
+    --brand-blue-hover: 217 95% 47%;
+    --dark-bg: 210 20% 98%;
+    --dark-card: 0 0% 100%;
+    --dark-border: 214 32% 82%;
+
+    /* Chart Colors - ENHANCED VISIBILITY */
+    --chart-1: 217 95% 52%;
+    --chart-2: 142 85% 18%;
+    --chart-3: 0 88% 52%;
+    --chart-4: 35 95% 45%;
+    --chart-5: 262 85% 52%;
+    --chart-6: 189 95% 38%;
+    --chart-7: 320 75% 48%;
+    --chart-8: 25 98% 50%;
+
+    /* Card-Specific Backgrounds - UNIQUE IDENTITIES */
+    --card-sales-bg: 142 40% 97%;
+    --card-sales-border: 142 50% 85%;
+    --card-sales-accent: 142 30% 95%;
+    
+    --card-orders-bg: 217 40% 97%;
+    --card-orders-border: 217 50% 85%;
+    --card-orders-accent: 217 30% 95%;
+    
+    --card-upsell-bg: 35 45% 97%;
+    --card-upsell-border: 35 55% 85%;
+    --card-upsell-accent: 35 35% 95%;
+    
+    --card-refund-bg: 0 40% 97%;
+    --card-refund-border: 0 50% 85%;
+    --card-refund-accent: 0 30% 95%;
+
+    /* PREMIUM SHADOWS - ENHANCED DEPTH */
+    --shadow-glow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 4px 16px rgba(0, 0, 0, 0.08);
+    --shadow-premium: 0 20px 40px rgba(0, 0, 0, 0.12), 0 8px 24px rgba(0, 0, 0, 0.08);
+    --shadow-card: 0 6px 20px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
+    --shadow-elegant: 0 12px 28px rgba(0, 0, 0, 0.10), 0 4px 12px rgba(0, 0, 0, 0.06);
+    
+    /* Card-Specific Shadows */
+    --shadow-sales: 0 8px 24px rgba(34, 197, 94, 0.15), 0 4px 12px rgba(34, 197, 94, 0.08);
+    --shadow-orders: 0 8px 24px rgba(59, 130, 246, 0.15), 0 4px 12px rgba(59, 130, 246, 0.08);
+    --shadow-upsell: 0 8px 24px rgba(245, 158, 11, 0.15), 0 4px 12px rgba(245, 158, 11, 0.08);
+    --shadow-refund: 0 8px 24px rgba(239, 68, 68, 0.15), 0 4px 12px rgba(239, 68, 68, 0.08);
+  }
+
+  .dark {
+    --background: 240 10% 6%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 4% 16%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 4% 16%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 240 4% 16%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 4% 16%;
+    --input: 240 4% 16%;
+    --ring: 217 91% 60%;
+
+    --sidebar-background: 240 10% 8%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4% 16%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 240 6% 12%;
+    --sidebar-ring: 217 91% 60%;
+
+    /* Dark Theme Premium Colors - PROPER CONTRAST */
+    --success: 142 76% 50%;
+    --success-bright: 142 76% 60%;
+    --warning: 45 93% 60%;
+    --warning-bright: 45 93% 70%;
+    --danger: 0 84% 60%;
+    --danger-bright: 0 84% 70%;
+    --info: 217 91% 60%;
+    --info-bright: 217 91% 70%;
+    --purple: 262 83% 58%;
+    --purple-bright: 262 83% 70%;
+    --cyan: 189 94% 43%;
+    --cyan-bright: 189 94% 55%;
+
+    /* Transaction Colors - Dark Theme */
+    --transaction-sales: 142 76% 50%;
+    --transaction-upsell: 45 93% 60%;
+    --transaction-refund: 0 84% 60%;
+
+    /* Card-Specific Backgrounds - DARK THEME VERSIONS */
+    --card-sales-bg: 240 10% 8%;
+    --card-sales-border: 142 76% 20%;
+    --card-sales-accent: 142 50% 15%;
+    
+    --card-orders-bg: 240 10% 8%;
+    --card-orders-border: 217 50% 20%;
+    --card-orders-accent: 217 40% 15%;
+    
+    --card-upsell-bg: 240 10% 8%;
+    --card-upsell-border: 45 50% 20%;
+    --card-upsell-accent: 45 40% 15%;
+    
+    --card-refund-bg: 240 10% 8%;
+    --card-refund-border: 0 50% 20%;
+    --card-refund-accent: 0 40% 15%;
+
+    /* Premium Shadows - Dark Theme */
+    --shadow-glow: 0 4px 12px hsla(0, 0%, 0%, 0.3);
+    --shadow-premium: 0 8px 25px hsla(0, 0%, 0%, 0.4);
+    --shadow-card: 0 2px 8px hsla(0, 0%, 0%, 0.25);
+    --shadow-elegant: 0 12px 28px hsla(0, 0%, 0%, 0.3);
+    
+    /* Card-Specific Shadows - Dark Theme */
+    --shadow-sales: 0 8px 24px rgba(34, 197, 94, 0.2), 0 4px 12px rgba(34, 197, 94, 0.1);
+    --shadow-orders: 0 8px 24px rgba(59, 130, 246, 0.2), 0 4px 12px rgba(59, 130, 246, 0.1);
+    --shadow-upsell: 0 8px 24px rgba(245, 158, 11, 0.2), 0 4px 12px rgba(245, 158, 11, 0.1);
+    --shadow-refund: 0 8px 24px rgba(239, 68, 68, 0.2), 0 4px 12px rgba(239, 68, 68, 0.1);
+  }
+
+  .dark-blue {
+    /* CLICK SYNC Dark Blue Theme - MINIMALIST EDITION */
+    --background: 218 28% 8%;
+    --foreground: 210 40% 90%;
+
+    --card: 220 26% 10%;
+    --card-foreground: 210 40% 90%;
+
+    --popover: 220 26% 10%;
+    --popover-foreground: 210 40% 90%;
+
+    --primary: 210 100% 70%;
+    --primary-foreground: 218 28% 8%;
+
+    --secondary: 220 26% 14%;
+    --secondary-foreground: 210 40% 85%;
+
+    --muted: 220 26% 14%;
+    --muted-foreground: 218 20% 60%;
+
+    --accent: 220 26% 16%;
+    --accent-foreground: 210 40% 90%;
+
+    --destructive: 0 65% 65%;
+    --destructive-foreground: 210 40% 90%;
+
+    --border: 220 26% 18%;
+    --input: 220 26% 14%;
+    --ring: 210 100% 70%;
+
+    --sidebar-background: 220 26% 10%;
+    --sidebar-foreground: 210 40% 90%;
+    --sidebar-primary: 210 100% 70%;
+    --sidebar-primary-foreground: 218 28% 8%;
+    --sidebar-accent: 220 26% 14%;
+    --sidebar-accent-foreground: 210 40% 90%;
+    --sidebar-border: 220 26% 18%;
+    --sidebar-ring: 210 100% 70%;
+
+    /* Dark Blue Theme Premium Colors - MINIMALIST BLUES */
+    --success: 160 84% 45%;
+    --success-bright: 160 84% 55%;
+    --warning: 45 90% 60%;
+    --warning-bright: 45 90% 70%;
+    --danger: 0 65% 65%;
+    --danger-bright: 0 65% 75%;
+    --info: 210 100% 70%;
+    --info-bright: 210 100% 80%;
+    --purple: 240 70% 70%;
+    --purple-bright: 240 70% 80%;
+    --cyan: 185 90% 55%;
+    --cyan-bright: 185 90% 65%;
+
+    /* Transaction Colors - Dark Blue Theme */
+    --transaction-sales: 160 84% 45%;
+    --transaction-upsell: 45 90% 60%;
+    --transaction-refund: 0 65% 65%;
+
+    /* Card-Specific Backgrounds - DARK BLUE MINIMALIST */
+    --card-sales-bg: 220 26% 10%;
+    --card-sales-border: 160 50% 25%;
+    --card-sales-accent: 160 30% 18%;
+    
+    --card-orders-bg: 220 26% 10%;
+    --card-orders-border: 210 50% 30%;
+    --card-orders-accent: 210 30% 20%;
+    
+    --card-upsell-bg: 220 26% 10%;
+    --card-upsell-border: 45 50% 25%;
+    --card-upsell-accent: 45 30% 18%;
+    
+    --card-refund-bg: 220 26% 10%;
+    --card-refund-border: 0 50% 25%;
+    --card-refund-accent: 0 30% 18%;
+
+    /* Premium Shadows - Dark Blue Minimalist */
+    --shadow-glow: 0 4px 20px hsla(210, 100%, 70%, 0.1);
+    --shadow-premium: 0 8px 32px hsla(210, 100%, 70%, 0.15);
+    --shadow-card: 0 2px 12px hsla(220, 26%, 4%, 0.3);
+    --shadow-elegant: 0 12px 40px hsla(210, 100%, 70%, 0.12);
+    
+    /* Card-Specific Shadows - Dark Blue Minimalist */
+    --shadow-sales: 0 8px 24px hsla(160, 84%, 45%, 0.15);
+    --shadow-orders: 0 8px 24px hsla(210, 100%, 70%, 0.15);
+    --shadow-upsell: 0 8px 24px hsla(45, 90%, 60%, 0.15);
+    --shadow-refund: 0 8px 24px hsla(0, 65%, 65%, 0.15);
+
+    /* Chart Colors - Dark Blue Theme */
+    --chart-1: 210 100% 70%;
+    --chart-2: 160 84% 45%;
+    --chart-3: 0 65% 65%;
+    --chart-4: 45 90% 60%;
+    --chart-5: 240 70% 70%;
+    --chart-6: 185 90% 55%;
+    --chart-7: 310 65% 70%;
+    --chart-8: 25 90% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  html {
+    @apply light;
+  }
+  
+  /* Compact spacing utilities */
+  .compact-spacing {
+    @apply space-y-3;
+  }
+  
+  .compact-padding {
+    @apply p-3;
+  }
+  
+  .compact-margin {
+    @apply m-2;
+  }
+
+  /* Card overrides para garantir padrão consistente */
+  .card-standard {
+    @apply bg-card shadow-premium transition-all duration-500 hover:shadow-elegant hover:scale-[1.01];
+  }
+
+  .card-premium {
+    @apply bg-card shadow-premium transition-all duration-500 hover:shadow-elegant hover:scale-[1.02];
+  }
+
+  /* Dark mode fallbacks */
+  .dark .card-standard {
+    @apply bg-card/50 backdrop-blur-sm;
+  }
+
+  .dark .card-premium {
+    @apply bg-card/50 backdrop-blur-sm;
+  }
+
+  /* Responsive adjustments for better framing */
+  @media (max-width: 1024px) {
+    body {
+      min-height: 100vh;
+    }
+  }
+
+  @media (max-width: 768px) {
+    body {
+      font-size: 13px;
+    }
+  }
+
+  /* Container adjustments for ultra-wide screens */
+  .container-responsive {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 1.5rem;
+  }
+
+  @media (min-width: 2560px) {
+    .container-responsive {
+      max-width: 2400px;
+      padding: 2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container-responsive {
+      padding: 1rem;
+    }
+  }
+}
+
+/* Sidebar positioning fix - Cross-browser compatible solution */
+.group\/sidebar-wrapper {
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Desktop: Enhanced fixed positioning with cross-browser support */
+@media (min-width: 769px) {
+  .group\/sidebar-wrapper > .peer[data-side="left"] {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    height: 100vh !important;
+    height: -webkit-fill-available !important; /* Safari/iOS */
+    height: -moz-available !important; /* Firefox */
+    z-index: 10 !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    -webkit-overflow-scrolling: touch !important; /* Smooth scrolling iOS */
+    overscroll-behavior: contain !important; /* Prevents scroll chaining */
+  }
+  
+  /* Prevent content overlap with fixed sidebar */
+  .group\/sidebar-wrapper > main {
+    margin-left: var(--sidebar-width) !important;
+    min-height: 100vh !important;
+    width: calc(100% - var(--sidebar-width)) !important;
+    position: relative !important;
+  }
+  
+  /* Collapsed state */
+  .group\/sidebar-wrapper > .peer[data-state="collapsed"] ~ main {
+    margin-left: var(--sidebar-width-icon) !important;
+    width: calc(100% - var(--sidebar-width-icon)) !important;
+  }
+  
+  /* Enhanced scrollbar for webkit browsers */
+  .group\/sidebar-wrapper > .peer[data-side="left"]::-webkit-scrollbar {
+    width: 4px !important;
+  }
+  
+  .group\/sidebar-wrapper > .peer[data-side="left"]::-webkit-scrollbar-track {
+    background: transparent !important;
+  }
+  
+  .group\/sidebar-wrapper > .peer[data-side="left"]::-webkit-scrollbar-thumb {
+    background: hsl(var(--sidebar-border)) !important;
+    border-radius: 2px !important;
+  }
+  
+  .group\/sidebar-wrapper > .peer[data-side="left"]::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--sidebar-accent)) !important;
+  }
+}
+
+/* Mobile: Sheet/Drawer behavior */
+@media (max-width: 768px) {
+  .group\/sidebar-wrapper > .peer[data-side="left"] {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    height: 100vh !important;
+    height: -webkit-fill-available !important;
+    z-index: 50 !important; /* Higher z-index for mobile overlay */
+    transform: translateX(-100%) !important;
+    transition: transform 0.3s ease-in-out !important;
+  }
+  
+  /* When mobile sidebar is open */
+  .group\/sidebar-wrapper > .peer[data-side="left"][data-state="open"] {
+    transform: translateX(0) !important;
+  }
+  
+  .group\/sidebar-wrapper > main {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+  
+  /* Backdrop for mobile */
+  .group\/sidebar-wrapper::before {
+    content: '' !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: rgba(0, 0, 0, 0.5) !important;
+    z-index: 40 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out !important;
+  }
+  
+  .group\/sidebar-wrapper:has(> .peer[data-side="left"][data-state="open"])::before {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+}
+
+/* High DPI displays support */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .group\/sidebar-wrapper > .peer[data-side="left"] {
+    border-width: 0.5px !important;
+  }
+}
+
+/* Reduced motion support for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .group\/sidebar-wrapper > .peer[data-side="left"],
+  .group\/sidebar-wrapper > main,
+  .group\/sidebar-wrapper::before {
+    transition: none !important;
+  }
+}
+
+/* Animations for dropdown menu */
+@keyframes slide-in-from-top {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-out-to-top {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+}
+
+@keyframes menu-glow {
+  0% {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  50% {
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.15);
+  }
+  100% {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.animate-in {
+  animation-fill-mode: both;
+}
+
+.slide-in-from-top-2 {
+  animation: slide-in-from-top 0.2s ease-out;
+}
+
+.animate-out {
+  animation-fill-mode: both;
+}
+
+.slide-out-to-top-2 {
+  animation: slide-out-to-top 0.2s ease-out;
+}
+
+/* Professional menu styling */
+.menu-glow-effect {
+  animation: menu-glow 3s ease-in-out infinite;
+}
+
+/* Enhanced menu dropdown styling */
+#navigation-menu {
+  box-shadow: 
+    0 10px 25px rgba(0, 0, 0, 0.15),
+    0 5px 10px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+}
+
+.dark #navigation-menu {
+  box-shadow: 
+    0 10px 25px rgba(0, 0, 0, 0.3),
+    0 5px 10px rgba(0, 0, 0, 0.2),
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+}
+
+/* Enhanced logo styling and centering */
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-out;
+  margin: 0 auto; /* Centralização perfeita */
+}
+
+.logo-container:hover {
+  transform: scale(1.05);
+}
+
+/* Perfect centering for centered logo layout */
+.logo-centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+/* Enhanced responsive logo sizing with larger dimensions */
+.logo-responsive {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  backface-visibility: hidden; /* Melhora performance e qualidade */
+}
+
+/* Responsive logo sizing - Novos tamanhos aumentados em 25% */
+@media (max-width: 640px) {
+  .logo-responsive {
+    width: 40px !important;  /* Aumentado de 32px para 40px (+25%) */
+    height: 40px !important;
+  }
+  .logo-container {
+    margin: 0 auto; /* Centralizado */
+  }
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+  .logo-responsive {
+    width: 50px !important;  /* Aumentado de 40px para 50px (+25%) */
+    height: 50px !important;
+  }
+  .logo-container {
+    margin: 0 auto; /* Centralizado */
+  }
+}
+
+@media (min-width: 769px) {
+  .logo-responsive {
+    width: 80px !important;  /* Aumentado de 64px para 80px (+25%) */
+    height: 80px !important;
+  }
+  .logo-container {
+    margin: 0 auto; /* Centralizado */
+  }
+}
+
+/* Menu positioning fixes */
+#navigation-menu {
+  position: absolute;
+  top: calc(100% + 0.5rem); /* Espaçamento seguro do topbar */
+  left: 0.5rem;
+  right: 0.5rem;
+  max-width: 24rem; /* Largura máxima para evitar ultrapassar a tela */
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  #navigation-menu {
+    left: 1rem;
+    right: auto;
+    max-width: 20rem;
+  }
+}
+
+@media (min-width: 768px) {
+  #navigation-menu {
+    left: 1.5rem;
+    max-width: 24rem;
+  }
+}
+
+/* Topbar layout fixes */
+.topbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.topbar-left-section {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 1.5rem; /* Espaçamento consistente */
+}
+
+.topbar-right-section {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 0.5rem;
+}
+
+/* Hamburger menu positioning */
+.hamburger-container {
+  position: relative;
+  z-index: 50;
+  flex-shrink: 0;
+}
+
+/* Prevent overlap issues */
+.topbar-nav {
+  position: relative;
+  z-index: 40;
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 30; /* Abaixo do topbar mas acima do conteúdo */
+}
+
+/* Hamburger menu animations */
+.hamburger-line {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hamburger-active .hamburger-line-1 {
+  transform: rotate(45deg) translate(3px, 3px);
+}
+
+.hamburger-active .hamburger-line-2 {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.hamburger-active .hamburger-line-3 {
+  transform: rotate(-45deg) translate(3px, -3px);
+}
+
+/* Professional backdrop overlay */
+.menu-overlay {
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+/* Compact menu item styling */
+#navigation-menu .menu-item {
+  transition: all 0.15s ease-out;
+}
+
+#navigation-menu .menu-item:hover {
+  transform: translateX(2px);
+  background: linear-gradient(90deg, hsl(var(--accent)) 0%, transparent 100%);
+}
+
+/* Smooth transitions for topbar navigation */
+.topbar-menu-transition {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Backdrop blur support */
+.supports-\[backdrop-filter\]\:bg-background\/60 {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
